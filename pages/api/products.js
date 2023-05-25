@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import clientPromise from "@/lib/mongodb";
-import { Product } from "@/models/Products";
+import { Product } from "@/models/Product";
 
 export default async function handle(req, res) {
   const { method } = req;
