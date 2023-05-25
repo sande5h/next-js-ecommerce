@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input {
+  @apply border-2 border-gray-200 rounded-md px-1 w-full;
+  @apply mb-2;
+}
+input:hover {
+  @apply border-blue-900;
+}
+
+
+textarea{
+    @apply border-2 border-gray-200 rounded-md px-1 w-full;
+    @apply mb-2;
+}
+
+textarea:hover{
+    @apply border-blue-900;
+}
+
+
+:any-link:hover{
+    @apply border-blue-900  border-2;
+}
+
+h1{
+   @apply  font-bold  text-blue-900 mb-2 
+}
+label{
+    @apply text-blue-900
+}
+
+.btn_primary{
+    @apply rounded-md text-white px-4 py-1 bg-blue-900
+}
