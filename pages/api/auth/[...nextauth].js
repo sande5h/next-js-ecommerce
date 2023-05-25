@@ -12,6 +12,7 @@ export default NextAuth({
       clientSecret: "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",
     }),
   ],
+  secret : process.env.SECRET
 
   
 }
