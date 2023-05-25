@@ -9,7 +9,8 @@ export default NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
+      clientSecret: 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,
     }),
   ],
+  pages : "/api/auth"
 });
