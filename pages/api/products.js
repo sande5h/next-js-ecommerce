@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
-import clientPromise from "@/lib/mongodb";
-import { Product } from "@/models/Product";
+
+import Product from "@/models/Product";
+import mongooseConnect from "@/lib/mongoose";
 
 export default async function handle(req, res) {
   const { method } = req;
@@ -8,13 +8,16 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, price } = req;
-    await Product.create({
+    console.log(req.body)
+    const { title, description, price } = req.body;
+
+    console.log( title, description, price )
+     const product = await Product.create({
       title,
       description,
       price,
     });
 
-    res.json(Product);
+    res.json(product);
   }
 }
