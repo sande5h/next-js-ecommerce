@@ -46,7 +46,7 @@ export default function Nav() {
           </svg>
           DashBoard
         </Link>
-        <Link href="/products" className={route.includes('/products') ? activeLink : inactiveLink}>
+        <Link href="/product" className={route.includes('/product') ? activeLink : inactiveLink}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
