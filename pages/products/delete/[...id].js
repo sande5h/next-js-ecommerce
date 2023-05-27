@@ -23,11 +23,11 @@ export default function  DeleteProductPage() {
     }
 
     const  deleteProduct =async()=>{
-       console.log( " delete =",await axios.delete('/api/products?id='+id));
+       await axios.delete('/api/products?id='+id)
        getBack();
     }
     return <Layout>
-        <h1 className="text-center"> WANT TO DELETE  "{productInfo?.title}" ?</h1>
+        <h1 className="text-center">WANT TO DELETE &quot;{productInfo?.title}&quot;?</h1>
         <div className="flex gap-2 justify-center">
         <button className="btn-red " onClick={deleteProduct}>Yes</button>
         <button className="btn-default"onClick={getBack}>No</button>
