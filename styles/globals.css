@@ -35,3 +35,37 @@ label{
 .btn_primary{
     @apply rounded-md text-white px-4 py-1 bg-blue-900
 }
+
+
+table{
+    @apply w-full;
+}
+
+table.basic thead tr td {
+    @apply bg-blue-100
+}
+table.basic tr td {
+    @apply border border-blue-300  p-1;
+
+}
+
+table.basic a {
+    @apply bg-blue-900 text-white mr-1 border-0 text-sm p-1 rounded-md inline-flex gap-1;
+}
+
+
+
+table .edit:hover{
+    @apply border-0
+}
+
+.btn-red, .btn-default{
+    @apply rounded-md px-4 py-1
+}
+.btn-red{
+    @apply rounded-md text-white  bg-red-900
+}
+
+.btn-default{
+    @apply rounded-md text-white  bg-gray-500
+}

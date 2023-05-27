@@ -1,12 +1,12 @@
-import mongoose from "mongoose";
-import { model, Schema } from "mongoose";
 
-const ProductSchema = new mongoose.Schema({
+import { model , Schema, models} from "mongoose";
+
+const ProductSchema = new Schema({
   title: String,
   description: String,
   price: Number,
 });
 
-const Product =
-  mongoose.models.Product || mongoose.model("Product", ProductSchema);
+const Product = models.Product || model("Product", ProductSchema);
+
 export default Product;
