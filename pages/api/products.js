@@ -1,5 +1,5 @@
 
-import Product from "@/models/Product";
+import {Product} from "@/models/Product";
 import mongooseConnect from "@/lib/mongoose";
 
 export default async function handle(req, res) {
@@ -12,12 +12,12 @@ export default async function handle(req, res) {
     const { title, description, price } = req.body;
 
     console.log( title, description, price )
-     const product = await Product.create({
+     const ProductDoc = await Product.create({
       title,
       description,
       price,
     });
 
-    res.json(product);
+    res.json(ProductDoc);
   }
 }
